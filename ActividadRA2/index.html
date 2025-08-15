@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css"/>
+    <title>Actividad de aprendizaje para RA2: Taller práctico implementado CSS3, felxbox y Grid</title>
+</head>
+
+<body>
+    <!--Contenedor principal-->
+    <div class="Grid-Dashboard">
+        <!--Barra lateral de navegacion-->
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Cantidad de EPP en inventario</a>
+                <a href="#">Relacion cantidad de empleados/EPP en inventario</a>
+            </nav>
+            </aside>
+        <!-- Encabezado -->
+        <header class="header">
+            <h1>Dashboard Administrativo</h1>
+            <p>Bienvenido</p>
+            <div class="usuario">
+                <span>Admin</span>
+            </div>
+         </header>
+        
+        <!--Area principal-->
+        <main class="main">
+            <h2>Cantidad y cargo de empleados en area de trabajo</h2>
+            <section class="empleados">
+                <div class="empleado">
+                    <h3>Soldadores</h3>
+                    <p>3</p>
+                </div>
+                <div class="empleado">
+                    <h3>Auxiliares</h3>
+                    <p>3</p>
+                </div>
+                <div class="empleado">
+                    <h3>Supervisores</h3>
+                    <p>1</p>
+                </div>
+                <div class="empleado">
+                    <h3>Personal SST</h3>
+                    <P>2</P>
+                </div>
+                <div class="empleado">
+                    <h3>Coordinador de alturas</h3>
+                    <p>1</p>
+                </div>
+            </section>
+
+            <h2>Cantidad de EPP en inventario</h2>
+            <section class="inventario">
+                <div class="tipo_epp">
+                    <h3 >Casco dielectrico</h3>
+                    <p>0</p>
+                </div>
+                <div class="tipo_epp">
+                    <h3>Gafas de seguridad</h3>
+                    <p>3</p>
+                </div>
+                <div class="tipo_epp">
+                    <h3>Tapaoidos</h3>
+                    <p>30</p>
+                </div>
+                <div class="tipo_epp">
+                    <h3>Mascarilla</h3>
+                    <p>1</p>
+                </div>
+                <div class="tipo_epp">
+                    <h3>Guantes para auxiliares</h3>
+                    <P>12</P>
+                </div>
+                <div class="tipo_epp">
+                    <h3>Guantes para soldador</h3>
+                    <p>4</p>
+                </div>
+            </section>
+
+
+
+            <section class="tabla">
+                <h2>Relacion cantidad de empleados/EPP en inventario</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EPP</th>
+                            <th>Numero de empleados que usan este EPP</th>
+                            <th>EPP en inventario</th>
+                            <th>Hacer pedido de EPP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Casco dielectrico</td>
+                            <td>10</td>
+                            <td>0</td>
+                            <td>SI</td>
+                        </tr>
+                        <tr>
+                            <td>Gafas de seguridad</td>
+                            <td>10</td>
+                            <td>3</td>
+                            <td>SI</td>
+                        </tr>
+                        <tr>
+                            <td>Tapaoidos</td>
+                            <td>10</td>
+                            <td>30</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>Mascarilla para control de humos vapores</td>
+                            <td>6</td>
+                            <td>1</td>
+                            <td>SI</td>
+                        </tr>
+                        <tr>
+                            <td>Guantes para auxiliares</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>Guantes para soldador</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>NO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <h2>Relacion cantidad de empleados/EPP en inventario</h2>
+            <section class="grafico">
+                <h2>Grafico de EPP</h2>
+                <canvas id="Grafico_EPP" width="400" height="200"></canvas>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Marco representaciones industriales - inventario</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

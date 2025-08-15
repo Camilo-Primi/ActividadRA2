@@ -1,0 +1,199 @@
+:root {
+    --color-principal: #2c3e50;
+    --color-secundario: #3498db;
+    --color-fondo: #ecf0f1;
+    --color-texto: #fff;
+    --fuente: 'Segoe UI', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: var(--fuente);
+    background-color: var(--color-fondo);
+}
+
+/* principal con Grid */
+.Grid-Dashboard{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px auto 40px;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main"
+        "sidebar footer";
+    min-height: 100vh;
+
+}
+/*sidebar*/
+.sidebar{
+    grid-area: sidebar;
+    background:var(--color-principal);
+    color:var(--color-texto);
+    padding: 1rem;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar a{
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: var(--color-secundario);
+    border-radius: 5px;
+}
+
+/* Colapsar sidebar con hover */
+.sidebar:hover {
+    width: 250px;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background: var(--color-secundario);
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Main */
+.main {
+    grid-area: main;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+/*section*/
+.empleados, .inventario{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /*Para adaptarse en pantallas pequeñas */
+}
+
+.empleado, .tipo_epp{
+    flex: 1 ;
+    background: var(--color-principal);
+    color: var(--color-texto);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.empleado:hover, .tipo_epp:hover{
+    transform: translateY(-5px);
+    background: var(--color-secundario);
+}
+
+
+/* Tabla */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-bottom: 8%;
+    overflow: hidden;
+}
+
+thead {
+    background: var(--color-principal);
+    color: var(--color-texto);
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(even){
+    background: #f4f4f4;
+}
+
+tbody tr:hover{
+    background: var(--color-secundario);
+    color: white;
+}
+/* Flex en filas de tabla */
+.tabla tbody tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabla tbody tr td {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Ajuste de encabezado de tabla con Flex */
+.tabla thead tr {
+    display: flex;
+    justify-content: space-between;
+}
+.tabla thead th {
+    flex: 1;
+    border: none;
+}
+
+.grafico {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.footer {
+    grid-area: footer;
+    background: var(--color-principal);
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto auto 50px;
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .empleados, .inventario {
+        flex-direction: column;
+    }
+
+    .tabla tbody tr, .tabla thead tr {
+        flex-direction: column;
+    }
+}
