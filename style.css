@@ -172,8 +172,8 @@ tbody tr:hover{
 
 .Porcentaje{
     width: 200px;
-    background-color: steelblue;
-    color: white;
+    background-color: #4682b4;
+    color: #ffffff;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -183,7 +183,7 @@ tbody tr:hover{
 }
 
 .Porcentaje:hover{
-    background-color: darkorange;
+    background-color: #ff8c00;
     cursor: pointer;
 }
 
